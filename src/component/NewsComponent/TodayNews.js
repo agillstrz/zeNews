@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import Card from "../Card";
 import FetchingAPI from "../FetchingAPI/FetchingAPI";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,7 +8,6 @@ import "swiper/css";
 import "swiper/css/autoplay";
 
 function TodayNews() {
-  const [kategori, setKategori] = useState(false);
   const {
     data: news,
     loading,
