@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./component/Navbar";
+import TodayNews from "./component/NewsComponent/TodayNews";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import News from "./component/NewsComponent/News";
+import Footer from "./component/Footer";
+import GetSearch from "./component/GetSearch";
+import Loading from "./component/Loading";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App ">
+        <Navbar />
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<TodayNews />} />
+            <Route path="/News/:cate" element={<News />} />
+            <Route path="/search/:name" element={<GetSearch />} />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
