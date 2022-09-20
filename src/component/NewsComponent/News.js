@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Card from "../Card";
 import FetchingAPI from "../FetchingAPI/FetchingAPI";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper";
 
 // Import Swiper styles
 import "swiper/css";

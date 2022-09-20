@@ -12,15 +12,15 @@ function Card({ url, title, image, description, publish, author }) {
         <h1 className="font-bold lg:text-xl  pb-2">
           <a
             className="hover:underline hover:text-hijau"
-            href={`${url}`}
+            href={url}
             target={"_blank"}
           >
             {title}
           </a>
         </h1>
         <p className="mb-5">{description}</p>
-        <a className="hover:underline text-blue-800" href="">
-          <span className="text-black/60">{time},</span> {author}
+        <a className="hover:underline text-blue-800">
+          <span className="text-black/60">{time},</span>
         </a>
       </div>
     </div>

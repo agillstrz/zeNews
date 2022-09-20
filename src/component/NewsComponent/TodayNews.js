@@ -8,18 +8,10 @@ import "swiper/css";
 import "swiper/css/autoplay";
 
 function TodayNews() {
-  const {
-    data: news,
-    loading,
-    error,
-  } = FetchingAPI(
+  const { data: news, error } = FetchingAPI(
     "https://newsapi.org/v2/top-headlines?country=id&apiKey=313e9d036541408a8cbb7523e09e9207"
   );
-  const {
-    data: business,
-    loading: load,
-    error: err,
-  } = FetchingAPI(
+  const { data: business, error: err } = FetchingAPI(
     "https://newsapi.org/v2/top-headlines?country=id&category=business&apiKey=313e9d036541408a8cbb7523e09e9207"
   );
 
@@ -38,7 +30,7 @@ function TodayNews() {
             news.slice(0, 5).map((m) => (
               <SwiperSlide key={m.url}>
                 <div className=" relative h-80  group overflow-hidden">
-                  <img src={m.urlToImage} className="w-full" />
+                  <img src={m.urlToImage} className="w-full" alt={m.url} />
                   <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"></div>
                   <div className="bg-black/70 absolute bottom-0 h-28 left-0 right-0  flex items-center">
                     <div className="text-white font-bold text-xl px-20 ">

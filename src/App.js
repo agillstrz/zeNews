@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import News from "./component/NewsComponent/News";
 import Footer from "./component/Footer";
 import GetSearch from "./component/GetSearch";
-import Loading from "./component/Loading";
 
 function App() {
   return (

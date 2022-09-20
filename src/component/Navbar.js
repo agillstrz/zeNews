@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [scroll, setScroll] = useState(false);
   const [name, setName] = useState("agil");
-  const [check, setCheck] = useState(false);
   const navigate = useNavigate();
   useEffect(() => {
     window.addEventListener("scroll", () => {
