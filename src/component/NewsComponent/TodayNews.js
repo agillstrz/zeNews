@@ -35,7 +35,11 @@ function TodayNews() {
                   <div className="bg-black/70 absolute bottom-0 h-28 left-0 right-0  flex items-center">
                     <div className="text-white font-bold text-xl px-20 ">
                       <p className="text-center">
-                        <a className="hover:underline hover:text-hijau" href="">
+                        <a
+                          className="hover:underline hover:text-hijau"
+                          href={m.url}
+                          target="_blank"
+                        >
                           {m.title}
                         </a>
                       </p>
@@ -82,7 +86,7 @@ function TodayNews() {
                   <img
                     className="lg:h-52 w-full"
                     src={m.urlToImage}
-                    alt="business"
+                    alt={m.title}
                   />
                 </div>
                 <h1 className="font-semibold text-[15px] lg:text-lg py-2">
