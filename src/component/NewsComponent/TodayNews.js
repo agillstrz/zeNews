@@ -38,7 +38,6 @@ function TodayNews() {
                         <a
                           className="hover:underline hover:text-hijau"
                           href={m.url}
-                          target="_blank"
                         >
                           {m.title}
                         </a>
@@ -90,11 +89,7 @@ function TodayNews() {
                   />
                 </div>
                 <h1 className="font-semibold text-[15px] lg:text-lg py-2">
-                  <a
-                    className="hover:underline hover:text-hijau"
-                    href={m.url}
-                    target={"_blank"}
-                  >
+                  <a className="hover:underline hover:text-hijau" href={m.url}>
                     {m.title}
                   </a>
                 </h1>

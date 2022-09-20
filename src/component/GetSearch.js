@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Card from "./Card";
 import FetchingAPI from "./FetchingAPI/FetchingAPI";
