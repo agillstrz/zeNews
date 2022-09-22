@@ -1,7 +1,7 @@
 # ZeNews
 
 Website pencarian berita ter-update
-Semua berita berasa dari API [newsapi.org](https://newsapi.org/).
+Semua berita berasa dari API [newsapi.org](https://newsapi.org/).  
 **Dibuat menggunakan**
 
 <p>

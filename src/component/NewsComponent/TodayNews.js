@@ -9,10 +9,10 @@ import "swiper/css/autoplay";
 
 function TodayNews() {
   const { data: news, error } = FetchingAPI(
-    "https://newsapi.org/v2/top-headlines?country=id&apiKey=313e9d036541408a8cbb7523e09e9207"
+    `https://newsapi.org/v2/top-headlines?country=id&apiKey=${process.env.REACT_APP_TMDB_KEY}`
   );
   const { data: business, error: err } = FetchingAPI(
-    "https://newsapi.org/v2/top-headlines?country=id&category=business&apiKey=313e9d036541408a8cbb7523e09e9207"
+    `https://newsapi.org/v2/top-headlines?country=id&category=business&apiKey=${process.env.REACT_APP_TMDB_KEY}`
   );
 
   return (
@@ -53,7 +53,7 @@ function TodayNews() {
       <div>
         {error && <p>{error}</p>}
         {news &&
-          news.slice(5, 10).map((m) => (
+          news.slice(6, 10).map((m) => (
             <div key={m.url}>
               <Card
                 title={m.title}

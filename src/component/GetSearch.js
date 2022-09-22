@@ -6,8 +6,9 @@ import Loading from "./Loading";
 const GetSearch = () => {
   const { name } = useParams();
   const { loading, data, error } = FetchingAPI(
-    `https://newsapi.org/v2/everything?q=${name}&from=2022-08-20&sortBy=publishedAt&apiKey=313e9d036541408a8cbb7523e09e9207`
+    `https://newsapi.org/v2/everything?q=${name}&from=2022-09-20&sortBy=publishedAt&apiKey=${process.env.REACT_APP_TMDB_KEY}`
   );
+
   return (
     <>
       {error && <p>{error}</p>}

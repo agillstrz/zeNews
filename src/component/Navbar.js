@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [scroll, setScroll] = useState(false);
@@ -35,22 +35,34 @@ const Navbar = () => {
         </Link>
         <ul className="flex gap-x-12 uppercase ">
           <li className="btn-nav">
-            <Link to="/news/entertainment">entertainment</Link>
+            <NavLink activeClassName="active" to="/news/entertainment">
+              entertainment
+            </NavLink>
           </li>
           <li className="btn-nav">
-            <Link to="/news/sport">sport</Link>
+            <NavLink activeClassName="active" to="/news/sport">
+              Sport
+            </NavLink>
           </li>
           <li className="btn-nav">
-            <Link to="news/business">business</Link>
+            <NavLink activeClassName="active" to="/news/business">
+              business
+            </NavLink>
           </li>
           <li className="btn-nav">
-            <Link to="/news/technology">technology</Link>
+            <NavLink activeClassName="active" to="/news/technology">
+              technology
+            </NavLink>
           </li>
           <li className="btn-nav">
-            <Link to="/news/science">science</Link>
+            <NavLink activeClassName="active" to="/news/science">
+              science
+            </NavLink>
           </li>
           <li className="btn-nav">
-            <Link to="/news/health">health</Link>
+            <NavLink activeClassName="active" to="/news/health">
+              health
+            </NavLink>
           </li>
           <div className=" text-black flex">
             <form onSubmit={HandleSearch}>

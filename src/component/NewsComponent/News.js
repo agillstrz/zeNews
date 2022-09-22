@@ -12,7 +12,7 @@ function News() {
   const [view, setView] = useState(false);
   const { cate } = useParams();
   const { data, loading, error } = FetchingAPI(
-    `https://newsapi.org/v2/top-headlines?country=id&category=${cate}&apiKey=313e9d036541408a8cbb7523e09e9207`
+    `https://newsapi.org/v2/top-headlines?country=id&category=${cate}&apiKey=${process.env.REACT_APP_TMDB_KEY}`
   );
   return (
     <div>
